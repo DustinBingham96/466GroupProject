@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS WEIGHT(
 
 CREATE TABLE IF NOT EXISTS FOODS(
     Name CHAR(10),
-    foodCatagory CHAR(10),    
+    foodCategory CHAR(10),    
     dailyValue INT,
     ssPounds INT,
     ssTablespoon INT,
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS FOODS(
     Potassium INT,
     Sodium INT,
     Sulfur INT,
-    PRIMARY KEY (Name, foodCatagory)
+    PRIMARY KEY (Name, foodCategory)
 );
 
 CREATE TABLE IF NOT EXISTS MEAL(
