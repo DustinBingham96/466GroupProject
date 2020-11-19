@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS WORKOUT(
     Intensity INT,
     Duration TIME,
     ID INT,
-    PRIMARY KEY (DateTime, Type),
+    PRIMARY KEY (DateTime, Type, ID),
     FOREIGN KEY (Type) REFERENCES TypeOfWorkout(Name),
     FOREIGN KEY (ID) REFERENCES USER(ID)
 );
@@ -68,4 +68,36 @@ CREATE TABLE IF NOT EXISTS MEAL(
     FOREIGN KEY (Beverage) REFERENCES FOODS(Name)
 );
 
+INSERT INTO USER(ID, firstName, lastName) VALUES (1, "Bob", "Joe");
+INSERT INTO USER(firstName, lastName) VALUES ("Rick", "James");
+INSERT INTO USER(firstName, lastName) VALUES ("Drew", "Peacocks");
+
+INSERT INTO TypeOfWorkout(Name, Description) VALUES ("Cardio", "Workout");
+INSERT INTO TypeOfWorkout(Name, Description) VALUES ("Strength", "Workout");
+
+INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-18 16:30:00", "Cardio", 10, "00:30:00", 1);
+INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-18 16:30:00", "Cardio", 10, "00:30:00", 2);
+INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-18 15:30:00", "Strength", 10, "00:30:00", 1);
+INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-18 15:30:00", "Strength", 10, "00:30:00", 2);
+
+INSERT INTO WEIGHT(Date, Pounds, ID) VALUES ("2020-11-18", 185, 1);
+INSERT INTO WEIGHT(Date, Pounds, ID) VALUES ("2020-11-18", 200, 2);
+INSERT INTO WEIGHT(Date, Pounds, ID) VALUES ("2020-11-18", 215, 3);
+
+INSERT INTO FOODS(Name, foodCategory) VALUES ("Apple", "Fruit");
+INSERT INTO FOODS(Name, foodCategory) VALUES ("Banana", "Fruit");
+INSERT INTO FOODS(Name, foodCategory) VALUES ("Broccoli", "Vegetable");
+INSERT INTO FOODS(Name, foodCategory) VALUES ("Cauliflaur", "Vegetable");
+INSERT INTO FOODS(Name, foodCategory) VALUES ("Chicken", "Meat");
+INSERT INTO FOODS(Name, foodCategory) VALUES ("Steak", "Meat");
+INSERT INTO FOODS(Name, foodCategory) VALUES ("Coffee", "Beverage");
+INSERT INTO FOODS(Name, foodCategory) VALUES ("Corn", "Vegetable");
+INSERT INTO FOODS(Name, foodCategory) VALUES ("Milk", "Beverage");
+INSERT INTO FOODS(Name, foodCategory) VALUES ("Orange", "Fruit");
+INSERT INTO FOODS(Name, foodCategory) VALUES ("Water", "Beverage");
+
+INSERT INTO MEAL(DateTime, ID, Meat, Vegetable, Fruit, Beverage) VALUES("2020-11-18 10:30:00", 1, "Steak", "Corn", "Apple", "Water");
+INSERT INTO MEAL(DateTime, ID, Meat, Vegetable, Fruit, Beverage) VALUES("2020-11-18 10:30:00", 2, "Chicken", "Broccoli", "Banana", "Water");
+INSERT INTO MEAL(DateTime, ID, Meat, Vegetable, Fruit, Beverage) VALUES("2020-11-18 10:30:00", 3, "Steak", "Cauliflaur", "Orange", "Coffee");
+INSERT INTO MEAL(DateTime, ID, Meat, Vegetable, Fruit, Beverage) VALUES("2020-11-18 10:30:00", 1, "Chicken", "Corn", "Apple", "Water");
 
