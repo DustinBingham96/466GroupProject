@@ -11,14 +11,7 @@ try
 		$pdo = new PDO($dsn, $username, $password);
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         
-        $mysql = "INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES (?, ?, ?, ?, ?);";
-
-		$rspre = $pdo->prepare($mysql);
-		
-        $rspre->execute(array($_POST["Workout_time"],$_POST["Workout_type"],$_POST["Workout_intencity"],$_POST["Workout_duration"],$_POST["Workout_ID"]));
-        
-
-		echo "Workout Succesfully Added!";
+		echo "<h2>You have succefully picked a type of workout!</h2>";
 }
 	catch(PDOexception $e)
 	{ 

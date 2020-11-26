@@ -45,6 +45,7 @@
 
         // Submit button
         echo "<input type=\"submit\" value=\"Submit Workout\">";
+
         echo "</form>";
 
         echo "<datalist id=\"limittimeslist\">";
@@ -55,6 +56,22 @@
         echo "<option value=\"00:50\">";
         echo "<option value=\"00:60\">";
         echo "</datalist>";
+
+        echo "<h2>View Type of Workout's</h2>";
+        // Dropdown for type of workouts 
+        echo "<form action=\"http://students.cs.niu.edu/~z1861700/DropTypeWorkout.php\" method=\"POST\">";
+        echo "<label for=\"TypeWorkout\">View type of workouts:";
+
+        echo "<select name=\"TypeWorkout\" id=\"TypeWorkout\">";
+        echo "<option value=\"Cardio\">Cardio</option>";
+        echo "<option value=\"Strength\">Strength</option>";
+        
+        // Submit button
+        echo "<br><br>";
+        echo "<input type=\"submit\" value=\"Submit Type of Workout\">";
+
+        
+        echo "</form>";
     }
 
     catch(PDOexception $e)
