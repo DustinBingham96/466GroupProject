@@ -1,11 +1,12 @@
 <html>
+
     <header>
         <title>Food/Beverage Insertion</title>
     </header>
 
     <body>
         <h1>Input Food Information</h1>
-        <form action="/insertfooddrink.php" method="POST">
+        <form action="../groupproject/insertfooddrink.php" method="POST">
             Name: </label><input type="text" name="name"><br>
             Type: <input type="radio" name="type" value="Meat">Meat </label>
             <input type="radio" name="type" value="Vegetable">Vegetable </label>
@@ -22,6 +23,8 @@
             </select>
             <input type="number" name="servingsize"><br><br>
 
+            Calories: <input type="number" name = "calories"><br><br>
+
             Macronutrients (Enter % Daily Value)<br>
             Protein: <input type="number" name="Protein" ><br>
             Fats: <input type="number" name="Fats" ><br>
@@ -35,7 +38,7 @@
 
             Minerals (Enter % Daily Value)<br>
             Calcium: <input type="number" name="Calcium" ><br>
-            Chlroide: <input type="number" name="Chlroide" ><br>
+            Chlroide: <input type="number" name="Chloride" ><br>
             Magnesium: <input type="number" name="Magnesium" ><br>
             Phosphorus: <input type="number" name="Phosphorus" ><br>
             Potassium: <input type="number" name="Potassium" ><br>
