@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS WORKOUT(
     DateTime DATETIME,
     Type CHAR(12),
     Intensity INT,
-    Duration TIME,
+    Duration INT,
     ID INT,
     PRIMARY KEY (DateTime, Type, ID),
     FOREIGN KEY (Type) REFERENCES TypeOfWorkout(Name),
@@ -75,10 +75,10 @@ INSERT INTO USER(firstName, lastName) VALUES ("Drew", "Peacocks");
 INSERT INTO TypeOfWorkout(Name, Description) VALUES ("Cardio", "Workout");
 INSERT INTO TypeOfWorkout(Name, Description) VALUES ("Strength", "Workout");
 
-INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-18 16:30:00", "Cardio", 10, "00:30:00", 1);
-INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-18 16:30:00", "Cardio", 10, "00:30:00", 2);
-INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-18 15:30:00", "Strength", 10, "00:30:00", 1);
-INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-18 15:30:00", "Strength", 10, "00:30:00", 2);
+INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-18 16:30:00", "Cardio", 10, "30", 1);
+INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-18 16:30:00", "Cardio", 10, "30", 2);
+INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-18 15:30:00", "Strength", 10, "30", 1);
+INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-18 15:30:00", "Strength", 10, "30", 2);
 
 INSERT INTO WEIGHT(Date, Pounds, ID) VALUES ("2020-11-18", 185, 1);
 INSERT INTO WEIGHT(Date, Pounds, ID) VALUES ("2020-11-18", 200, 2);
