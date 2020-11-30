@@ -127,6 +127,7 @@
 			echo "Your daily intake of $micro is $daily $unit";
 			break;
 		}
+		echo "<br></br><form><input type=\"button\" value=\"Go Back\" onclick=\"history.back()\"></form>";
 	} else {
 		echo "<b>** ERROR ** Missing Variables!</b>";
 	}
