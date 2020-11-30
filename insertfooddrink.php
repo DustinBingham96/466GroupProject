@@ -1,4 +1,5 @@
 <?php
+    #get rid of this for secrets
     $username = "z1880434";
     $password = "1993Oct12";
 
@@ -57,15 +58,16 @@
                                                     Potassium, Sodium, Sulfur)
                                                     VALUES (\"$_POST[name]\", \"$_POST[type]\", \"$_POST[calories]\", $ssPounds, $ssTablespoon, $ssGrams
                                                     , $ssOunces, $ssCups, \"$_POST[Protein]\", \"$_POST[Fats]\", \"$_POST[Carbohydrates]\",
-                                                    \"$_POST[vitaminA]\", \"$_POST[vitaminE]\", \"$_POST[vitaminC]\", \"$_POST[vitaminD]\",
-                                                    \"$_POST[Calcium]\", \"$_POST[Chloride]\", \"$_POST[Magnesium]\", \"$_POST[Phosphorus]\",
-                                                    \"$_POST[Potassium]\", \"$_POST[Sodium]\", \"$_POST[Sulfer]\");");
+                                                    \"$_POST[vitaminA]\", 0, \"$_POST[vitaminC]\", \"$_POST[vitaminD]\",
+                                                    \"$_POST[Calcium]\", 0, \"$_POST[Magnesium]\", 0,
+                                                    \"$_POST[Potassium]\", \"$_POST[Sodium]\", 0);");
 
 	$insertintodb->execute();
 
 	echo "<html>";
 	echo "<body>Insertion Complete<br>";
-	echo "<a href=\"../groupproject/insertfooddrink.html\">";
+    echo "<a href=\"../groupproject/insertfooddrink.html\">";
+    #Change this href so it goes back to the proper page
 	echo "<button type=\"button\">Go Back</button>";
 	echo "</a>";
 	echo "</body></html>";

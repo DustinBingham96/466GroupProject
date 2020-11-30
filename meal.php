@@ -6,6 +6,7 @@
     <body>
         <?php
 
+            #remove these and insert a secrets for the database.
             $username = "z1880434";
             $password = "1993Oct12";
 
@@ -65,8 +66,10 @@
                 if(isset($_POST["user"]) && isset($_POST["mealdate"]) && isset($_POST["meat"]) && isset($_POST["vegetable"]) && isset($_POST["fruit"]) && isset($_POST["beverage"])){
                     $insertmeal = $pdo->prepare("INSERT INTO MEAL (DateTime, ID, Meat, Vegetable, Fruit, Beverage) VALUES (\"$_POST[mealdate]\", \"$_POST[user]\", \"$_POST[meat]\", \"$_POST[vegetable]\", \"$_POST[fruit]\", \"$_POST[beverage]\");");
 		    $insertmeal->execute();
-		    echo "<h3>Insertion Complete</h3><br>";
-		    echo "<button type=\"button\">Go Back</button>";
+            echo "<h3>Insertion Complete</h3><br>";
+            
+            #insert an href inside of a to take it back to the main page after meal inserted.
+		    echo "<a ><button type=\"button\">Go Back</button></a>";
                 }
             }
             catch(PDOException $e){
