@@ -1,5 +1,5 @@
 <?php
-function draw_table($rows) 
+function draw_tableWorkout($rows) 
 {
     if(!$rows) //if the current rows is empty, diplay a message stating so
     {

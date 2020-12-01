@@ -20,7 +20,7 @@
 
             echo "<h1>Workouts over selected period of time</h1>";
 
-            draw_table($rows);
+            draw_tableWorkout($rows);
             echo "<br/>";
 
             $rs2 = $pdo->prepare("SELECT Type, Intensity, Duration FROM WORKOUT WHERE ID = 1 AND DateTime BETWEEN :TO AND :FROM;");
