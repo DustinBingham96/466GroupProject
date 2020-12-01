@@ -24,6 +24,7 @@ try
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         
 		echo "<h2 style=\"font-size:50px;\">You have succefully viewed he type's of workouts!</h2>";
+		echo "<button onclick=\"history.back()\">Click here to go back </button>";
 }
 	catch(PDOexception $e)
 	{ 

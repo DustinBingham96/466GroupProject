@@ -29,6 +29,9 @@ try
 		$rspre->execute(array($_POST["Workout_time"],$_POST["Workout_type"],$_POST["Workout_intencity"],$_POST["Workout_duration"],$_POST["Workout_ID"]));
 
 		echo "<h2 style=\"font-size:50px;\">Workout Succesfully Added!</h2>";
+
+		echo "<button onclick=\"history.back()\">Click here to go back </button>";
+
 }
 	catch(PDOexception $e)
 	{ 
