@@ -1,11 +1,22 @@
+<html><head><title>Succesfully added Workout</title></head>
+<style>body{background-color:#ecf9ec}</style>
+<body>
 <?php
+/*
+	Group Project 2020 CSCI 466 Database 
+	Members: Reinaldo 
+			 Miguel
+			 Dustin 
+			 Christian
+			 Bryan
 
-//echo "You are inside addPart";
-//This file (addPart.php) will add a new part to the Database 
+	enterWorkout.php: This file will set up the connection to the database 
+					  and it will create the SQL statement that will do the 
+					  insertion of the workout the user is entering to the database. 
+*/
 try
 {
 	include("myUserPass.php");
-	include("tables.php");
 
 		$dsn = "mysql:host=courses;dbname=z1861700";
 		$pdo = new PDO($dsn, $username, $password);
@@ -15,10 +26,9 @@ try
 
 		$rspre = $pdo->prepare($mysql);
 		
-	
 		$rspre->execute(array($_POST["Workout_time"],$_POST["Workout_type"],$_POST["Workout_intencity"],$_POST["Workout_duration"],$_POST["Workout_ID"]));
 
-		echo "Workout Succesfully Added!";
+		echo "<h2 style=\"font-size:50px;\">Workout Succesfully Added!</h2>";
 }
 	catch(PDOexception $e)
 	{ 
@@ -26,3 +36,5 @@ try
 	}
 
 ?>
+</body>
+</html>

@@ -1,17 +1,29 @@
+<html><head><title>View Workouts</title></head>
+<style>body{background-color:#ecf9ec}</style>
+<body>
 <?php
+/*
+	Group Project 2020 CSCI 466 Database 
+	Members: Reinaldo 
+			 Miguel
+			 Dustin 
+			 Christian
+			 Bryan
 
-//echo "You are inside addPart";
-//This file (addPart.php) will add a new part to the Database 
+	DropTypeWorkout.php: This file will set up the connection to the database 
+						 along with showing the user a message that they have 
+						 viewed the available workouts.  
+*/
 try
 {
 	include("myUserPass.php");
-	include("tables.php");
+
 
 		$dsn = "mysql:host=courses;dbname=z1861700";
 		$pdo = new PDO($dsn, $username, $password);
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         
-		echo "<h2>You have succefully viewed he type's of workouts!</h2>";
+		echo "<h2 style=\"font-size:50px;\">You have succefully viewed he type's of workouts!</h2>";
 }
 	catch(PDOexception $e)
 	{ 
@@ -19,3 +31,5 @@ try
 	}
 
 ?>
+</body>
+</html>
