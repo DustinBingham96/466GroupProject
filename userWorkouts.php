@@ -3,8 +3,6 @@
     <body>
     <?php 
         include("secrets.php");
-        //include("workoutdata.php");
-        
 
         try
         {
@@ -28,5 +26,5 @@
             echo "Connection to database failed: " . $e->getMessage();
         }
     ?>
-    </body>
+</body>
 </html>

@@ -9,13 +9,16 @@ function draw_table($rows)
     echo "<table id=\"id01\" border=1 cellspacing=1>";
     echo "<tr>";
 	//loops through, showing the header of the column and the column information itself 
-    foreach($rows[0] as $key => $item) { 
+    foreach($rows[0] as $key => $item) 
+    { 
       echo "<th>$key</th>";
     }
       echo "</tr>";
-    foreach($rows as $row) {
+    foreach($rows as $row) 
+    {
       echo "<tr>";
-      foreach($row as $key => $item) {
+      foreach($row as $key => $item) 
+      {
         echo "<td>$item</td>";
       }
       echo "</tr>";
