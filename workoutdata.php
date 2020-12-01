@@ -65,6 +65,11 @@
         echo "<h2>Average calories burned per day over time duration: </h2>";
         echo round($avgCal) . "<sub>cal</sub>";
         echo "<br/>";
+        echo "<br/>";
+        echo "<br/>";
+        echo "<form action=\"http://students.cs.niu.edu/~z1756030/userWorkouts.php\" method=\"GET\">";
+        echo "<input type=\"submit\" value=\"Workout Date Range Selection\" />";
+        echo "</form>";	
        
         
 
