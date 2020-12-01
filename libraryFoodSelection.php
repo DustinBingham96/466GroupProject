@@ -7,7 +7,7 @@ function draw_table1($rows) {
     echo "<tr>";
 	echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')\" style=\"cursor:pointer\">Name</th>";
     	echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(2)')\" style=\"cursor:pointer\">Food Category</th>";
-	 echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(3)')\" style=\"cursor:pointer\">Proteins</th>";
+	echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(3)')\" style=\"cursor:pointer\">Proteins</th>";
 	echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(4)')\" style=\"cursor:pointer\">Fats</th>";
 	echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(5)')\" style=\"cursor:pointer\">Carbohydrates</th>";
 	echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(6)')\" style=\"cursor:pointer\">Calories</th>";
@@ -19,17 +19,7 @@ function draw_table1($rows) {
 	echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(12)')\" style=\"cursor:pointer\">Magnesium % D.V.</th>";
 	echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(13)')\" style=\"cursor:pointer\">Potassium mg</th>";
 	echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(14)')\" style=\"cursor:pointer\">Sodium mg</th>";
-	//echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(15)')\" style=\"cursor:pointer\">Proteins</th>";
-	//echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(16)')\" style=\"cursor:pointer\">Proteins</th>";
-	//echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(17)')\" style=\"cursor:pointer\">Proteins</th>";
-	//echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(18)')\" style=\"cursor:pointer\">Proteins</th>";
-	//echo "<th onclick=\"w3.sortHTML('#myTable', '.item', 'td:nth-child(19)')\" style=\"cursor:pointer\">Proteins</th>";
   	echo "</tr>";
-	//loops through, showing the header of the column and the column information itself 
-    /*foreach($rows[0] as $key => $item) { 
-      echo "<th>$key</th>";
-    }
-      echo "</tr>";*/
     foreach($rows as $row) {
       echo "<tr class=\"item\">";
       foreach($row as $key => $item) {
