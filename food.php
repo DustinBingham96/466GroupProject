@@ -39,6 +39,10 @@
      <br><br>
      <input type="submit" value="Submit"/>
      </form>
+     <br></br>
+     <form>
+	<input type="button"  value="Go Back" onclick="history.back()">
+    </form>
 <?php
 include('secrets.php');
 include('DrawTable.php');
