@@ -75,6 +75,10 @@ INSERT INTO USER(firstName, lastName) VALUES ("Drew", "Peacocks");
 INSERT INTO TypeOfWorkout(Name, Description) VALUES ("Cardio", "Workout");
 INSERT INTO TypeOfWorkout(Name, Description) VALUES ("Strength", "Workout");
 
+INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-01 10:30:00", "Cardio", 9, 35, 3);
+INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-06 11:30:00", "Cardio", 6, 66, 1);
+INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-07 12:30:00", "Strength", 10, 10, 2);
+
 INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-01 10:30:00", "Cardio", 1, 15, 1);
 INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-06 11:30:00", "Cardio", 2, 30, 1);
 INSERT INTO WORKOUT(DateTime, Type, Intensity, Duration, ID) VALUES ("2020-11-07 12:30:00", "Strength", 3, 45, 1);
