@@ -45,7 +45,7 @@
     </form>
 <?php
 include('secrets.php');
-include('DrawTable.php');
+include('drawTable.php');
 
 	try {
 		$dsn = "mysql:host=$servername;dbname=$dbname";
