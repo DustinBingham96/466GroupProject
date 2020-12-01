@@ -11,7 +11,7 @@ try
 		$pdo = new PDO($dsn, $username, $password);
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         
-		echo "<h2>You have succefully picked a type of workout!</h2>";
+		echo "<h2>You have succefully viewed he type's of workouts!</h2>";
 }
 	catch(PDOexception $e)
 	{ 
